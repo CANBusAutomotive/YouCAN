@@ -13,7 +13,5 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-    - name: Workspace config
-      run: cd CANShark
     - name: Build with dotnet
-      run: cd CANShark | dotnet build --configuration Release
+      run: dotnet build \CANShark --configuration Release
