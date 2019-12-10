@@ -16,4 +16,4 @@ jobs:
     - name: Workspace config
       run: cd CANShark
     - name: Build with dotnet
-      run: dotnet build .\CANShark\ --configuration Release
+      run: cd CANShark | dotnet build --configuration Release
