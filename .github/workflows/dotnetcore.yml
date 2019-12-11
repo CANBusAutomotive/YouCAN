@@ -24,4 +24,4 @@ jobs:
           # Artifact name
         name: wqe
           # Directory containing files to upload
-        path: \CANShark\CANShark\CANShark.Desktop\bin\Release\netcoreapp3.1
+        path: /CANShark/CANShark/CANShark.Desktop/bin/Release/netcoreapp3.1
