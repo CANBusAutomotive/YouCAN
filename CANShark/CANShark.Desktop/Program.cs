@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Reflection;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Logging.Serilog;
 using Avalonia.ReactiveUI;
 using CANShark.Desktop.ViewModels;
 using CANShark.Desktop.Views;
+using ReactiveUI;
+using Splat;
 
 namespace CANShark.Desktop
 {
@@ -26,9 +29,11 @@ namespace CANShark.Desktop
         // container, etc.
         private static void AppMain(Application app, string[] args)
         {
-            var window = new MainWindow
+            Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetExecutingAssembly());
+
+            var window = new MainWindowView
             {
-                DataContext = new MainWindowViewModel(),
+                DataContext = new MainWindowViewModel()
             };
 
             app.Run(window);

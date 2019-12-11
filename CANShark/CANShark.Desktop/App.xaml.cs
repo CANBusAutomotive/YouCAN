@@ -9,5 +9,9 @@ namespace CANShark.Desktop
         {
             AvaloniaXamlLoader.Load(this);
         }
+
+        private void InitDependecies()
+        {
+        }
     }
 }
